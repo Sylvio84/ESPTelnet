@@ -31,9 +31,10 @@
 using TCPClient = WiFiClient;
 using TCPServer = WiFiServer;
 
+using CallbackFunction = std::function<void(const String&)>;
+
 /////////////////////////////////////////////////////////////////
 class ESPTelnetBase {
-  typedef void (*CallbackFunction)(String str);
 
  public:
   ESPTelnetBase();
